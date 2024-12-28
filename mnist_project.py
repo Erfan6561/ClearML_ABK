@@ -33,10 +33,10 @@ X_train, X_val, X_test = X_train / 255.0, X_val / 255.0, X_test / 255.0
 
 # Создание модели нейронной сети
 model = tf.keras.models.Sequential([
-    tf.keras.layers.Flatten(input_shape=(28, 28)),  # Преобразование 2D-изображения в 1D вектор
-    tf.keras.layers.Dense(128, activation='relu'),   # Полносвязный слой с 128 нейронами и функцией активации ReLU
-    tf.keras.layers.Dropout(0.2),                    # Слой Dropout для предотвращения переобучения
-    tf.keras.layers.Dense(10)                         # Выходной слой с 10 нейронами (по количеству классов)
+    tf.keras.layers.Flatten(input_shape=(28, 28)),  
+    tf.keras.layers.Dense(128, activation='relu'),   
+    tf.keras.layers.Dropout(0.2),      
+    tf.keras.layers.Dense(10)                
 ])
 
 # Определение функции потерь и компиляция модели
